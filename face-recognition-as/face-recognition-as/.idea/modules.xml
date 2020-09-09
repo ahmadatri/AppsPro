@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/face-recognition-as.iml" filepath="$PROJECT_DIR$/.idea/modules/face-recognition-as.iml" group="face-recognition-as" />
+      <module fileurl="file://$PROJECT_DIR$/facerecognition/facerecognition.iml" filepath="$PROJECT_DIR$/facerecognition/facerecognition.iml" group="face-recognition-as/facerecognition" />
+      <module fileurl="file://$PROJECT_DIR$/openCVLibrary2410/openCVLibrary2410.iml" filepath="$PROJECT_DIR$/openCVLibrary2410/openCVLibrary2410.iml" group="face-recognition-as/openCVLibrary2410" />
+    </modules>
+  </component>
+</project>

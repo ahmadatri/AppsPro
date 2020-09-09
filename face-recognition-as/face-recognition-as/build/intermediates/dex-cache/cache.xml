@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\ahmad\Desktop\face-recognition-as\face-recognition-as\facerecognition\build\intermediates\exploded-aar\face-recognition-as\openCVLibrary2410\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="0b8b1cd3e8cc85b41bd0965faadf22e904fe9627">
+        <dex dex="C:\Users\ahmad\Desktop\face-recognition-as\face-recognition-as\facerecognition\build\intermediates\pre-dexed\debug\face-recognition-as-openCVLibrary2410-unspecified_9f821af3559ed0c0adfd1c0cf138c416abc06cd5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ahmad\Desktop\face-recognition-as\face-recognition-as\facerecognition\libs\javacv.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="1824ed7a180ee32aa57f5632a489c10aad8f1804">
+        <dex dex="C:\Users\ahmad\Desktop\face-recognition-as\face-recognition-as\facerecognition\build\intermediates\pre-dexed\debug\javacv_8990ccc3c895f472c171649ef755599a2e20d97f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ahmad\Desktop\face-recognition-as\face-recognition-as\facerecognition\libs\javacpp.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="08f8b1e3fdcc93a1e9076d6279864d6a46982a85">
+        <dex dex="C:\Users\ahmad\Desktop\face-recognition-as\face-recognition-as\facerecognition\build\intermediates\pre-dexed\debug\javacpp_52d6c706570ccd781cdfe3e603e16ba6940aae56.jar" />
+    </item>
+
+</items>

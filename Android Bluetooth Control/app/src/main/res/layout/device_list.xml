@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DeviceList">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btScan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scanList"
+                android:onClick="btnDiscover"
+                android:text="SCAN" />
+
+            <Button
+                android:id="@+id/btPaired"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lv_paired_devices"
+                android:text="Press to show the paired Devices"
+                />
+
+
+            <ListView
+                android:id="@+id/lv_paired_devices"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_below="@+id/textpair"
+                android:layout_weight="1" />
+
+            <ListView
+                android:id="@+id/scanList"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_below="@+id/textscan"
+                />
+
+
+            <TextView
+                android:id="@+id/textpair"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Paired Devices:"
+                android:layout_below="@+id/scanList"
+                android:textStyle="bold"
+                android:layout_marginTop="50dp"/>
+
+
+            <TextView
+                android:id="@+id/textscan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pair A Device:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Note: After pairing the device. You must swipe down to refresh the page inorder for the device to appear in the (Paired Devices List) "
+                android:layout_below="@+id/btPaired"/>
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>
