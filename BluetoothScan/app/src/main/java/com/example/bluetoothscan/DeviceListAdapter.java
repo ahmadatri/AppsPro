@@ -1,4 +1,5 @@
-package com.example.bluetooth.arduinobluetoothcontrol;
+package com.example.bluetoothscan;
+
 
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
@@ -11,14 +12,14 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-public class DeviceListAdapter extends  ArrayAdapter<BluetoothDevice> {
+public class DeviceListAdapter extends ArrayAdapter<BluetoothDevice> {
 
     private LayoutInflater mLayoutInflater;
     private ArrayList<BluetoothDevice> mDevices;
-    private int mViewResourceId;
+    private int  mViewResourceId;
 
-    public DeviceListAdapter(Context context, int tvResourceId, ArrayList<BluetoothDevice> devices) {
-        super(context, tvResourceId, devices);
+    public DeviceListAdapter(Context context, int tvResourceId, ArrayList<BluetoothDevice> devices){
+        super(context, tvResourceId,devices);
         this.mDevices = devices;
         mLayoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mViewResourceId = tvResourceId;
@@ -34,12 +35,12 @@ public class DeviceListAdapter extends  ArrayAdapter<BluetoothDevice> {
             TextView deviceAdress = (TextView) convertView.findViewById(R.id.tvDeviceAddress);
 
             if (deviceName != null) {
-                deviceName.setText(device.getName() + "\n" + device.getAddress());
+                deviceName.setText(device.getName()+"\n"+device.getAddress());
             }
 
         }
 
         return convertView;
     }
-}
 
+}

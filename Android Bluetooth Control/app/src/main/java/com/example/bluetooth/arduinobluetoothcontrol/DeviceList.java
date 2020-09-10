@@ -43,68 +43,68 @@ public class DeviceList extends AppCompatActivity implements AdapterView.OnItemC
 
 
 
-    private final BroadcastReceiver mBroadcastReceiver1 = new BroadcastReceiver() {
-        public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
-            // When discovery finds a device
-            if (action.equals(myBluetooth.ACTION_STATE_CHANGED)) {
-                final int state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, myBluetooth.ERROR);
-
-                switch(state){
-                    case BluetoothAdapter.STATE_OFF:
-                        Log.d(TAG, "onReceive: STATE OFF");
-                        break;
-                    case BluetoothAdapter.STATE_TURNING_OFF:
-                        Log.d(TAG, "mBroadcastReceiver1: STATE TURNING OFF");
-                        break;
-                    case BluetoothAdapter.STATE_ON:
-                        Log.d(TAG, "mBroadcastReceiver1: STATE ON");
-                        break;
-                    case BluetoothAdapter.STATE_TURNING_ON:
-                        Log.d(TAG, "mBroadcastReceiver1: STATE TURNING ON");
-                        break;
-                }
-            }
-        }
-    };
+//    private final BroadcastReceiver mBroadcastReceiver1 = new BroadcastReceiver() {
+//        public void onReceive(Context context, Intent intent) {
+//            String action = intent.getAction();
+//            // When discovery finds a device
+//            if (action.equals(myBluetooth.ACTION_STATE_CHANGED)) {
+//                final int state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, myBluetooth.ERROR);
+//
+//                switch(state){
+//                    case BluetoothAdapter.STATE_OFF:
+//                        Log.d(TAG, "onReceive: STATE OFF");
+//                        break;
+//                    case BluetoothAdapter.STATE_TURNING_OFF:
+//                        Log.d(TAG, "mBroadcastReceiver1: STATE TURNING OFF");
+//                        break;
+//                    case BluetoothAdapter.STATE_ON:
+//                        Log.d(TAG, "mBroadcastReceiver1: STATE ON");
+//                        break;
+//                    case BluetoothAdapter.STATE_TURNING_ON:
+//                        Log.d(TAG, "mBroadcastReceiver1: STATE TURNING ON");
+//                        break;
+//                }
+//            }
+//        }
+//    };
 
     /**
      * Broadcast Receiver for changes made to bluetooth states such as:
      * 1) Discoverability mode on/off or expire.
      */
-    private final BroadcastReceiver mBroadcastReceiver2 = new BroadcastReceiver() {
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            final String action = intent.getAction();
-
-            if (action.equals(BluetoothAdapter.ACTION_SCAN_MODE_CHANGED)) {
-
-                int mode = intent.getIntExtra(BluetoothAdapter.EXTRA_SCAN_MODE, BluetoothAdapter.ERROR);
-
-                switch (mode) {
-                    //Device is in Discoverable Mode
-                    case BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE:
-                        Log.d(TAG, "mBroadcastReceiver2: Discoverability Enabled.");
-                        break;
-                    //Device not in discoverable mode
-                    case BluetoothAdapter.SCAN_MODE_CONNECTABLE:
-                        Log.d(TAG, "mBroadcastReceiver2: Discoverability Disabled. Able to receive connections.");
-                        break;
-                    case BluetoothAdapter.SCAN_MODE_NONE:
-                        Log.d(TAG, "mBroadcastReceiver2: Discoverability Disabled. Not able to receive connections.");
-                        break;
-                    case BluetoothAdapter.STATE_CONNECTING:
-                        Log.d(TAG, "mBroadcastReceiver2: Connecting....");
-                        break;
-                    case BluetoothAdapter.STATE_CONNECTED:
-                        Log.d(TAG, "mBroadcastReceiver2: Connected.");
-                        break;
-                }
-
-            }
-        }
-    };
+//    private final BroadcastReceiver mBroadcastReceiver2 = new BroadcastReceiver() {
+//
+//        @Override
+//        public void onReceive(Context context, Intent intent) {
+//            final String action = intent.getAction();
+//
+//            if (action.equals(BluetoothAdapter.ACTION_SCAN_MODE_CHANGED)) {
+//
+//                int mode = intent.getIntExtra(BluetoothAdapter.EXTRA_SCAN_MODE, BluetoothAdapter.ERROR);
+//
+//                switch (mode) {
+//                    //Device is in Discoverable Mode
+//                    case BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE:
+//                        Log.d(TAG, "mBroadcastReceiver2: Discoverability Enabled.");
+//                        break;
+//                    //Device not in discoverable mode
+//                    case BluetoothAdapter.SCAN_MODE_CONNECTABLE:
+//                        Log.d(TAG, "mBroadcastReceiver2: Discoverability Disabled. Able to receive connections.");
+//                        break;
+//                    case BluetoothAdapter.SCAN_MODE_NONE:
+//                        Log.d(TAG, "mBroadcastReceiver2: Discoverability Disabled. Not able to receive connections.");
+//                        break;
+//                    case BluetoothAdapter.STATE_CONNECTING:
+//                        Log.d(TAG, "mBroadcastReceiver2: Connecting....");
+//                        break;
+//                    case BluetoothAdapter.STATE_CONNECTED:
+//                        Log.d(TAG, "mBroadcastReceiver2: Connected.");
+//                        break;
+//                }
+//
+//            }
+//        }
+//    };
 
 
 
@@ -207,16 +207,16 @@ public class DeviceList extends AppCompatActivity implements AdapterView.OnItemC
         scanList.setOnItemClickListener(DeviceList.this);
 
 
-//        scanList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-////                scanList.setOnItemClickListener(DeviceList.this);
-////                Toast.makeText(getApplicationContext(),"Connected",Toast.LENGTH_LONG).show();
-//                if(DeviceList.this){
-//
-//                }
-//            }
-//        });
+        scanList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                scanList.setOnItemClickListener(DeviceList.this);
+//                Toast.makeText(getApplicationContext(),"Connected",Toast.LENGTH_LONG).show();
+                if(DeviceList.this){
+
+                }
+            }
+        });
 
         if(myBluetooth == null)
         {
